@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  AOS.init();
-});
+AOS.init();
 
 //  Work experience cards
 
