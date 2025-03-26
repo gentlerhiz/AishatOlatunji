@@ -229,9 +229,9 @@ html {
 }
 
 .navbar-brand {
-  font-family: Agustina;
-  font-size: 30px;
-  font-weight: bold;
+  font-family: poppins;
+  font-size: 25px;
+  font-weight:normal;
 }
 
 .navbar {
