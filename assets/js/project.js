@@ -72,7 +72,7 @@ const projects = [
 ];
 
 // function for rendering project cards data
-const showCards = () => {
+const showProjectCards = () => {
   let output = "";
   projects.forEach(({ title, cardImage, Previewlink, Githublink }) => {
     output += `       
@@ -96,7 +96,50 @@ const showCards = () => {
   });
   projectcards.innerHTML = output;
 };
-document.addEventListener("DOMContentLoaded", showCards);
+document.addEventListener("DOMContentLoaded", showProjectCards);
+
+// Publication Cards
+
+const publications = document.querySelector(".publications");
+const publicationscard = [
+  {
+    title: "Treasurer",
+    cardImage: "assets/images/experience-page/nsbe.jpg",
+    description:
+      "Managed and allocated organization funds, ensuring proper budgeting for events, scholarships, and outreach programs. Organized fundraising initiatives, increasing financial support for student-led projects and professional development. Collaborated with the executive board to plan workshops and networking events, supporting members’ career growth.",
+  },
+  {
+    title: "Student Ambassador",
+    cardImage: "assets/images/experience-page/sbe.jpg",
+    description:
+      "Served as a liaison between students and faculty, promoting diversity and inclusion in STEM fields. Led recruitment efforts, increasing membership and student participation in networking events and mentorship programs. Organized career development workshops, connecting students with industry professionals.",
+  },
+  {
+    title: "Member",
+    cardImage: "assets/images/experience-page/ieee.jpg",
+    description:
+      "Engage in global networking and technical discussions with professionals in the engineering and technology space. Stay updated on cutting-edge research and innovations in AI, machine learning, and data science through IEEE resources. Participate in professional development events and workshops to enhance technical and leadership skills.",
+  },
+];
+
+const showPublicationCard = () => {
+  let output = "";
+  publicationscard.forEach(
+    ({ title, cardImage, description }) =>
+      (output += `        
+      <div class="card publications" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="600" style="height: 550px;width:400px">
+      
+      
+      <div class="content">
+          <h2 class="publicationsTitle">${title}</h2><br>
+          <p class="copy">${description}</p></div>
+      
+      </div>
+      `)
+  );
+  publications.innerHTML = output;
+};
+document.addEventListener("DOMContentLoaded", showPublicationCard);
 
 function myFunction() {
   // Declare variables
